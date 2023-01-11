@@ -3,6 +3,7 @@ package com.abetterandroid.resolutionchecker.ui.main
 import android.app.Activity
 import android.os.Build
 import androidx.lifecycle.ViewModel
+import com.abetterandroid.resolutionchecker.utils.Type
 import com.abetterandroid.resolutionchecker.wm.WmUtils
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -12,7 +13,7 @@ class MainFragmentViewModel @Inject constructor(
     private val wmUtils: WmUtils
 ): ViewModel() {
 
-
+    var type=Type.RealResolution
 
     fun getResolution(activity: Activity):String
     {
@@ -35,5 +36,10 @@ class MainFragmentViewModel @Inject constructor(
 
      fun getManufacturer():String{
         return Build.MANUFACTURER
+    }
+
+    fun setTypeOfResolution(type:Type)
+    {
+        this.type=type
     }
 }
