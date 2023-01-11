@@ -46,7 +46,7 @@ class OnBoarding2Fragment : Fragment(R.layout.fragment_onboarding_1) {
             buttonNext.setOnClickListener {
                 navigateToThirdOnBoardingScreen()
             }
-            buttonMoreApps.visibility=View.INVISIBLE
+            buttonMoreApps.visibility=View.VISIBLE
             buttonMoreApps.setOnClickListener {
                 startActivity(
                     Intent(

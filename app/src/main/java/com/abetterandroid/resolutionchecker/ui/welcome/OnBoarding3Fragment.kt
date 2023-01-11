@@ -53,7 +53,7 @@ class OnBoarding3Fragment : Fragment(R.layout.fragment_onboarding_1) {
                 setUserIsOld()
                 navigateToMainScreen()
             }
-            buttonMoreApps.visibility=View.VISIBLE
+            buttonMoreApps.visibility=View.INVISIBLE
             buttonMoreApps.setOnClickListener {
                 startActivity(
                     Intent(
