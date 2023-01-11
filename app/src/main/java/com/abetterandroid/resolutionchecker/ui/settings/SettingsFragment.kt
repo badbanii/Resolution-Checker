@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.abetterandroid.resolutionchecker.R
-import com.abetterandroid.resolutionchecker.databinding.FragmentMainBinding
+import com.abetterandroid.resolutionchecker.databinding.FragmentSettingsBinding
 
-class SettingsFragment : Fragment(R.layout.fragment_main) {
+class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
-    private var _binding: FragmentMainBinding? = null
+    private var _binding: FragmentSettingsBinding? = null
 
-    private val binding: FragmentMainBinding
+    private val binding: FragmentSettingsBinding
         get() = _binding!!
 
     override fun onDestroy() {
@@ -20,6 +20,6 @@ class SettingsFragment : Fragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentMainBinding.bind(view)
+        _binding = FragmentSettingsBinding.bind(view)
     }
 }
