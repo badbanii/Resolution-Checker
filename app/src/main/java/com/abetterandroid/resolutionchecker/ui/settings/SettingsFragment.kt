@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.abetterandroid.resolutionchecker.R
 import com.abetterandroid.resolutionchecker.databinding.FragmentSettingsBinding
+import com.suddenh4x.ratingdialog.AppRating
 import kotlin.system.exitProcess
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
@@ -44,6 +45,9 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                     Uri.parse("https://play.google.com/store/apps/dev?id=8049005269403185530")
                 )
             )
+        }
+        binding.buttonRate.setOnClickListener {
+            AppRating.Builder(requireActivity()).showNow()
         }
         binding.buttonShare.setOnClickListener {
             showSharingDialog()

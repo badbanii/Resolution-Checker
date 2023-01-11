@@ -78,4 +78,7 @@ dependencies {
     ///Toasts
     implementation 'com.github.GrenderG:Toasty:1.5.2'
 
+    ///Rate
+    implementation 'com.suddenh4x.ratingdialog:awesome-app-rating:2.5.0'
+
 }
