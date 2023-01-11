@@ -15,7 +15,7 @@
         android:src="@drawable/ic_phone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/textview_manufacturer"
@@ -38,6 +38,19 @@
         app:layout_constraintLeft_toRightOf="@id/imageview_phone"
         app:layout_constraintTop_toBottomOf="@id/textview_manufacturer" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_settings"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:icon="@drawable/ic_menu"
+        android:layout_marginEnd="20dp"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:iconGravity="textStart"
+        android:layout_marginTop="15dp"
+        />
     <TextView
         android:id="@+id/textview_current_resolution"
         android:layout_width="match_parent"
@@ -63,7 +76,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_current_resolution" />
 
-    <com.google.android.material.button.MaterialButton
+     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_refresh"
         android:layout_width="@dimen/_77sdp"
         android:layout_height="@dimen/_77sdp"
@@ -137,7 +150,7 @@
     </LinearLayout>
 
     <TextView
-        tools:text="Size of te display ....."
+        tools:text="Size of the display ....."
         android:id="@+id/textview_type_information"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
