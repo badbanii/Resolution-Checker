@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.abetterandroid.resolutionchecker.R
 import com.abetterandroid.resolutionchecker.databinding.FragmentOnboarding1Binding
 
-class OnBoarding2Fragment : Fragment(R.layout.fragment_onboarding_1) {
+class OnBoarding3Fragment : Fragment(R.layout.fragment_onboarding_1) {
 
     private var _binding: FragmentOnboarding1Binding? = null
     private val viewModel: OnBoardingViewModel by viewModels()
@@ -30,23 +30,30 @@ class OnBoarding2Fragment : Fragment(R.layout.fragment_onboarding_1) {
         updateUi()
     }
 
-    private fun navigateToThirdOnBoardingScreen()
+    private fun navigateToMainScreen()
     {
-        findNavController().navigate(R.id.action_onBoarding2Fragment_to_onBoarding3Fragment)
+        findNavController().navigate(R.id.action_onBoarding3Fragment_to_mainFragment)
     }
+
+    private fun setUserIsOld()
+    {
+        viewModel.setUserIsOld()
+    }
+
 
     private fun updateUi()
     {
         with(binding)
         {
-            textviewTitle.text="Check out our other apps!"
-            textviewDescription.text="Are you looking to change your dpi or resolution? Visit us by pressing on the 'more' button!\naBetterAndroid has everything you need."
-            animationView.setAnimation(R.raw.lottie_more)
+            textviewTitle.text="Our website is waiting for you!"
+            textviewDescription.text="www.aBetterAndroid.com\nIf you're curious enough\n\uD83E\uDD14"
+            animationView.setAnimation(R.raw.lottie_website)
             animationView.scaleType=ImageView.ScaleType.CENTER_CROP
             buttonNext.setOnClickListener {
-                navigateToThirdOnBoardingScreen()
+                setUserIsOld()
+                navigateToMainScreen()
             }
-            buttonMoreApps.visibility=View.INVISIBLE
+            buttonMoreApps.visibility=View.VISIBLE
             buttonMoreApps.setOnClickListener {
                 startActivity(
                     Intent(

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.abetterandroid.resolutionchecker.ui.utils.Constants
 import com.fxn.stash.Stash
 
-class WelcomeFragmentViewModel: ViewModel() {
+class OnBoardingViewModel: ViewModel() {
 
     fun setUserIsOld()
     {
