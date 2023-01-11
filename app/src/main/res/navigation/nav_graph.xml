@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/welcomeFragment">
+    app:startDestination="@id/onBoarding1Fragment">
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.abetterandroid.resolutionchecker.ui.welcome.WelcomeFragment"
@@ -23,4 +23,20 @@
         android:id="@+id/settingsFragment"
         android:name="com.abetterandroid.resolutionchecker.ui.settings.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/onBoarding1Fragment"
+        android:name="com.abetterandroid.resolutionchecker.ui.welcome.OnBoarding1Fragment"
+        android:label="OnBoarding1Fragment" >
+        <action
+            android:id="@+id/action_onBoarding1Fragment_to_onBoarding2Fragment"
+            app:destination="@id/onBoarding2Fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding2Fragment"
+        android:name="com.abetterandroid.resolutionchecker.ui.welcome.OnBoarding2Fragment"
+        android:label="OnBoarding2Fragment" />
 </navigation>

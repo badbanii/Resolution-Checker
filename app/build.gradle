@@ -64,4 +64,11 @@ dependencies {
 
     ///Welcome Screen
     implementation 'com.github.ErrorxCode:ModernOnboarding:1.0.0'
+
+    ///Coil
+    implementation 'io.coil-kt:coil:2.2.2'
+
+    ///Lottie
+    implementation "com.airbnb.android:lottie:5.2.0"
+
 }
