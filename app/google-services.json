@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "125688220110",
+    "project_id": "resolution-checker",
+    "storage_bucket": "resolution-checker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125688220110:android:60f87b2f1651aaaecfc39f",
+        "android_client_info": {
+          "package_name": "com.abetterandroid.resolutionchecker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125688220110-1b67dqroj08026ranm1vh6fji699grps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUH_pi2A_IhwcAEvspegTnLZBUFAkTf1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125688220110-1b67dqroj08026ranm1vh6fji699grps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
