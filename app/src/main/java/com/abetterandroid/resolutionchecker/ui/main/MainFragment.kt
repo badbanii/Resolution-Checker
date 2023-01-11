@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.abetterandroid.resolutionchecker.R
 import com.abetterandroid.resolutionchecker.databinding.FragmentMainBinding
 import com.abetterandroid.resolutionchecker.utils.Type
@@ -35,7 +36,7 @@ class MainFragment: Fragment(R.layout.fragment_main)  {
         with(binding){
             buttonRefresh.setOnClickListener {
                 updateUi()
-                Toasty.info(requireActivity(), "Updated.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(requireActivity(), "Updated.", Toast.LENGTH_SHORT, true).show()
             }
             buttonRealResolution.setOnClickListener {
                 setType(Type.RealResolution)
@@ -49,7 +50,15 @@ class MainFragment: Fragment(R.layout.fragment_main)  {
                 setType(Type.Bars)
                 updateUi()
             }
+            buttonSettings.setOnClickListener {
+                navigateToSettings()
+            }
         }
+    }
+
+    private fun navigateToSettings()
+    {
+        findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
     }
 
     private fun setType(type: Type)
